@@ -1,7 +1,8 @@
-import { join } from 'path'
-import type { Config } from 'tailwindcss'
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
-import { skeleton } from '@skeletonlabs/tw-plugin'
+import { skeleton } from '@skeletonlabs/tw-plugin';
+import { myCustomTheme } from './my-custom-theme';
 
 export default {
 	darkMode: 'class',
@@ -9,16 +10,13 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [
+	plugins: [//وشهي؟ فادتني من ناحية الانبوت
 		forms,
 		skeleton({
 			themes: {
-				preset: [
-					{
-						name: 'wintry',
-						enhancements: true,
-					},
-				],
+				custom: [
+					myCustomTheme
+				]
 			},
 		}),
 	],

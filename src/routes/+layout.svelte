@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "../app.postcss";
 
   // Floating UI for Popups
   import {
