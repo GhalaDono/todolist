@@ -1,22 +1,17 @@
 <script lang="ts">
  import Header from "$lib/header.svelte";
- import {name} from "$lib/stores/name";
+ import {tasks} from "$lib/stores/tasks";
+ import dayjs from "dayjs";
+
 
 /*function h(name:string):string{
 	return name+1;
-
 }*/
 //arrow function
-name.update((name:string)=>//السهم يسوي ريتيرن لبدي الميثود
+/*task.update((name:string)=>//السهم يسوي ريتيرن لبدي الميثود
 {return name+1;})
-
-
-
+console.log($task);*/
 //name.set('hello')
-//name.update(هنا نحط الميثود اللي نبيه ينطبع ، فإذا كان نفس السيت فاشالفايدة؟ انه لو ابي  اضيق قيم وبنفس الوقت القيم القديمة محفوظة)
-
-console.log($name);
-
  /*let array=[
 	'a',
 	'b',
@@ -26,14 +21,29 @@ console.log($name);
  let index=array.indexOf('d');
  array.splice(index,1);*/ //1 هو عدد العنصر
 //console.log(array);
+
+let title= "";
+
+function addTask(){
+	tasks.update((currentTasks)=>{
+		currentTasks.push({
+			title,
+			taskDate:dayjs(),
+			taskStatus:false,
+		});
+	return currentTasks;
+});
+title="";
+}
+
 </script>
 
-<div class="m-12 flex flex-col gap-8">
+<div class="p-4 md:p-8 lg:p-12 xl:p-16 flex flex-col gap-8 max-w-screen-lg mx-auto ">
 	<!--اللي سويناه لما فصلنا الاكواد اسمه component-->
 	<Header/>
 	
-	<div class="input-group input-group-divider  flex justify-between">
-		<input class="flex-1 !bg-white" type="search" placeholder="إدخال مهام" />
-		<button class="variant-filled-secondary">إضافة</button>
+	<div class="input-group input-group-divider  flex justify-between"><!--الفلكس هنا شغلته يبعد زر الاضافة عن البحث وما يخليهم تحت بعض اما انبوت قروب يخليه بيضاوي-->
+		<input bind:value={title} class="flex-1 !bg-white" type="search" placeholder="إدخال مهام" />
+		<button on:click={addTask} class="variant-filled-secondary">إضافة</button>
 	</div>
 </div>
