@@ -5,19 +5,26 @@ import { skeleton } from '@skeletonlabs/tw-plugin';
 import { myCustomTheme } from './my-custom-theme';
 
 export default {
-	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
-	theme: {
-		extend: {},
-	},
-	plugins: [//وشهي؟ فادتني من ناحية الانبوت
-		forms,
-		skeleton({
-			themes: {
-				custom: [
-					myCustomTheme
-				]
-			},
-		}),
-	],
+  darkMode: 'class',
+  content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+  theme: {
+    extend: {
+      colors: {
+        'custom-green': '#38614a',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['checked'],
+    },
+  },
+  plugins: [
+    forms,
+    skeleton({
+      themes: {
+        custom: [myCustomTheme],
+      },
+    }),
+  ],
 } satisfies Config;
