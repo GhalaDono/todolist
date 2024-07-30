@@ -14,7 +14,7 @@ declare namespace App {
 declare global{
 	interface Task{
 		title:string,
-		taskDate:Dayjs,
+		taskDate:string,
 		taskStatus:boolean,
 
 	}

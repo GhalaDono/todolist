@@ -26,7 +26,7 @@ function addTask(){
 	tasks.update((currentTasks)=>{
 		currentTasks.push({
 			title,
-			taskDate:dayjs(),
+			taskDate:dayjs().format(),
 			taskStatus:false,
 		});
 	return currentTasks;
