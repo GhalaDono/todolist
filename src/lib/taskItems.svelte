@@ -2,7 +2,21 @@
   import { tasks } from "$lib/stores/tasks";
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime";
- 
+  import { getModalStore, type ModalSettings } from "@skeletonlabs/skeleton";
+
+  const modalStore = getModalStore();
+  
+const modal: ModalSettings = {
+	type: 'confirm',
+	// Data
+	title: 'Please Confirm',
+	body: 'Are you sure you wish to proceed?',
+	// TRUE if confirm pressed, FALSE if cancel pressed
+	response: (r: boolean) => console.log('response:', r),
+};
+modalStore.trigger(modal);
+
+
   dayjs.extend(relativeTime);
 
   export let doneTask: boolean; //قيمة المتغير حتكون بالكومبوننتس
