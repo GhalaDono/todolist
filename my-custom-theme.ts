@@ -22,16 +22,16 @@ export const myCustomTheme: CustomThemeConfig = {
 		"--on-surface": "0 0 0",
 		// =~= Theme Colors  =~=
 		// primary | #416420 
-		"--color-primary-50": "227 232 222", // #e3e8de
-		"--color-primary-100": "217 224 210", // #d9e0d2
-		"--color-primary-200": "208 216 199", // #d0d8c7
-		"--color-primary-300": "179 193 166", // #b3c1a6
-		"--color-primary-400": "122 147 99", // #7a9363
-		"--color-primary-500": "65 100 32", // #416420
-		"--color-primary-600": "59 90 29", // #3b5a1d
-		"--color-primary-700": "49 75 24", // #314b18
-		"--color-primary-800": "39 60 19", // #273c13
-		"--color-primary-900": "32 49 16", // #203110
+		"--color-primary-50": "226 232 228", // #e2e8e4
+		"--color-primary-100": "216 224 220", // #d8e0dc
+		"--color-primary-200": "206 217 211", // #ced9d3
+		"--color-primary-300": "177 194 184", // #b1c2b8
+		"--color-primary-400": "118 148 131", // #769483
+		"--color-primary-500": "59 102 78", // #3b664e
+		"--color-primary-600": "53 92 70", // #355c46
+		"--color-primary-700": "44 77 59", // #2c4d3b
+		"--color-primary-800": "35 61 47", // #233d2f
+		"--color-primary-900": "29 50 38", // #1d3226
 		// secondary | #38614a 
 		"--color-secondary-50": "225 231 228", // #e1e7e4
 		"--color-secondary-100": "215 223 219", // #d7dfdb
