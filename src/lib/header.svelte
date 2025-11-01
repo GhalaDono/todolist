@@ -1,5 +1,10 @@
 <script lang="ts">
-    import { ListBox, ListBoxItem, popup, type PopupSettings } from '@skeletonlabs/skeleton';
+import * as Skeleton from '@skeletonlabs/skeleton';
+
+const { ListBox, ListBoxItem, popup } = Skeleton;
+type PopupSettings = Skeleton.PopupSettings;
+
+// @ts-ignore
     import dayjs from 'dayjs';
     import 'dayjs/locale/ar-sa';
 
@@ -21,7 +26,7 @@ const popupCombobox: PopupSettings = {
 
 <header class="flex justify-between">
     <div>
-        <h1 class="text-2xl lg:text-4xl  text-black">
+        <h1 class="font-bold text-3xl lg:text-4xl  text-black">
             {period} الخير 👋
         </h1>
         <h2 class="text-[1.055rem] lg:text-2xl text-[#6e6f6f] mt-3">
